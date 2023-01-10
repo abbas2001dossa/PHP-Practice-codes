@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating trsnditions</title>
+
+    <style>
+        /* CSS TRANSITIONS  */
+        body{
+            /* background-color: black; */
+        }
+
+
+        #box{
+            display: flex;
+            height: 200px;
+            width: 200px;
+            background-color: beige;
+
+
+            /* to centre items inside  the box  */
+            justify-content: center;
+            align-items: center;
+
+
+
+            /* now well us etransition */
+            /* saray colors jo beech me he guzr kr color change krega  */
+            /* transition-property: background-color; */
+
+            transition-property: all;
+            /* transition over everything - not background sepcifically */
+
+
+
+            
+            transition-duration: 2s;
+            /* Thus with the help f transition duration - we wiil now when the 
+            mouse hovers over the selected box -- the color would change 
+            -- ubut how much time would it take the color to change ?? thats 
+            what transition duration decides   */
+
+
+            transition-timing-function: ease-in;
+            /* sshro me slow hojayega phir fast
+            ease out - vice versa  */
+            /* ease-in-out   --> slow start - fast - slow end  */
+
+
+            transition-delay: 0.5s;
+            /* 2s ke bad cahlu ho mera transition  */
+
+
+
+
+            /* TRANSITIONS shORTHANd property */
+            
+            /* transition: background-color 1s ease-in 3s ; */
+            /* which element would be applicable to transition -- how much time --- type --- transiiton delay  */
+
+
+            /* to put all elements on transiton -- we can do ->  */
+
+        }
+
+
+        /* dependdent on transition  */
+        #box:hover{
+            background-color: grey;
+
+
+            /* to show other properties thatc ould transiton  */
+            height: 400px;
+            width: 400px;
+            border-radius: 100px;
+            font-size:27px;
+
+            /* wohi properties traansition hoskti jinkki values he  */
+            /* opacity - height -width can  */
+
+            
+
+        }
+
+
+
+
+
+
+
+
+
+        /* TRANSFORM PROPERTYYYYY  */
+
+        .box{
+            background-color: brown;
+            border: 2px solid red ;
+            border-radius: 8px;
+            height: 400px;
+            width: 400px;
+
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            /* transform property applying directlly  */
+            
+            /* trnsform wesay eans the same na graphically changing shape transformation  */
+            /* transform: rotate(45deg); */
+            /* 45degreee box rotates  */
+
+
+            /* we can also add transiton in this  */
+            /* to add a better effect of the rotation we wil add transition so it could rotate(trnsforming the box ) */
+
+            transition: all 1s ease-in-out;
+
+        }
+
+
+        .box:hover{
+            /* transform: rotate(45deg); */
+            /* transform: rotate(360deg); */
+
+
+
+            /* skew */
+            /* transform: skew(40deg); */
+
+            /* scale */
+            /* 2guna bar hojayehi etc  */
+            transform: scale(2);
+
+
+
+            /* TRANSLATE IN TRANSFORM  */
+            /* transform: translateX(123px); */
+            /* it would  move on x axis */
+
+            /* move on y axis -> translateY */
+
+            /* move on both  */
+            transform: translate(123px , 123px );
+            /*  xand y  */
+
+            
+
+
+
+
+        }
+
+        .contii{
+            background-color: burlywood;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* ab ye box centre me ajyaega conti ke andr jo he   */
+        
+            height: 80vh;
+
+        }
+
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CSS TRANSITIONS -->
+    <!-- uncommetn krdena  -->
+
+    <!-- <h3> This is css tranasitions tutuoriall </h3>
+    <div class="cont">
+        <div id="box">
+            This is a box 
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- TRANSSFORM PROPERTYYYY -->
+    <!-- can maake great animations  -->
+
+    <div class="contii">
+        <div class="box">
+            This  is a box 
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
